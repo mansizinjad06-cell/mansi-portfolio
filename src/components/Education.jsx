@@ -93,8 +93,8 @@ export default function Education() {
                 <div className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
               </div>
 
-              {/* Education Content Card */}
-              <div className="glass-card rounded-2xl p-6 sm:p-7 border border-white/10 hover:border-purple-500/40 transition-all">
+              {/* Education Content Card with Luxury Glassmorphism & Hover Lift */}
+              <div className="glass-card rounded-3xl p-7 sm:p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-[0_15px_40px_rgba(6,182,212,0.2)] hover:-translate-y-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                   <div>
                     <span className="text-xs font-mono text-cyan-400 font-semibold tracking-wider uppercase">

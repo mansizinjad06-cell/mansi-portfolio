@@ -36,15 +36,16 @@ export default function Awards() {
             return (
               <motion.div
                 key={award.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-6 sm:p-7 rounded-2xl glass-card border border-white/10 hover:border-purple-500/40 transition-all duration-300 overflow-hidden"
+                whileHover={{ y: -6, scale: 1.015 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="group relative p-7 sm:p-8 rounded-3xl glass-card border border-white/10 hover:border-purple-400/60 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-[0_15px_40px_rgba(139,92,246,0.25)]"
               >
-                {/* Background Ambient Glow */}
+                {/* Conic ambient glow aura */}
                 <div
-                  className={`absolute -top-12 -right-12 w-48 h-48 rounded-full blur-[70px] bg-gradient-to-br ${award.gradient} opacity-50 pointer-events-none group-hover:opacity-80 transition-opacity`}
+                  className={`absolute -top-16 -right-16 w-56 h-56 rounded-full blur-[80px] bg-gradient-to-br ${award.gradient} opacity-40 pointer-events-none group-hover:opacity-90 transition-opacity duration-500`}
                 />
 
                 <div className="flex items-start gap-4">

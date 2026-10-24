@@ -124,15 +124,21 @@ export default function Skills() {
                   {skill.note}
                 </p>
 
-                {/* Animated proficiency bar */}
-                <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden p-[0.5px]">
+                {/* Animated proficiency bar with cyber shimmer */}
+                <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden p-[1px] border border-white/10">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full"
-                  />
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="h-full bg-gradient-to-r from-purple-500 via-pink-400 to-cyan-400 rounded-full relative overflow-hidden"
+                  >
+                    <motion.div
+                      animate={{ x: ['-100%', '100%'] }}
+                      transition={{ repeat: Infinity, duration: 2.5, ease: "linear" }}
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                    />
+                  </motion.div>
                 </div>
               </motion.div>
             ))}
